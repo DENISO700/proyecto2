@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Iniciar sesion</title>
+
+    <!-- Font Awesome CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+</head>
+
+<body>
+
+    <!-- CABEZERA -->
+    <header class="main-header">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
+            <div class="container" id="cabezera">
+
+                <div class="navbar-header">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                    <a class="navbar-brand" href="#"><img src="images/logotipo.png" class="logo d-sm-none d-none d-md-block"></a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp" style="color: white;">
+                        <li class="nav-item active"><a class="nav-link" href="index.html"><i class="fa fa-user-circle" ></i>&nbsp;&nbsp;Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="acerca-de.html"><i class="fa fa-globe" ></i>&nbsp;&nbsp;Quienes Somos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="catalogo.html"><i class="fa fa-percent" ></i>&nbsp;&nbsp;Promociones</a></li>
+
+
+                    </ul>
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+    <!-- FIN CABEZERA-->
+
+
+    <!-- MARCADOR-->
+    <div class="all-title-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Inicio Sesion Cliente</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN MARCADOR-->
+
+
+    <!-- Formulario -->
+
+    <form>
+
+        <div class="col-12  text-center">
+
+            <div class="col-md-4 m-auto"><img src="images/user.png" class="user m-auto "></div><br>
+            <div class="col-md-4  text-center m-auto pb-4"><input type="text" placeholder="Email" name="usuario" id="correo" autofocus class="login-text form-control" required></div>
+
+            <div class="col-md-4  text-center m-auto pb-3">
+                <input type="password" placeholder="Contraseña" id="contraseña" name="contraseña" class="login-text form-control" required>
+            </div>
+            <div class="col-md-4 m-auto text-left pb-3">
+                <label for="Rellenar" class="chek-login"><input type="checkbox" id="Rellenar" checked>Mantenerme Registrado</label>
+            </div>
+
+            <div class="alert alert-danger" id="error" style="display: none;"></div>
+
+            <button type="button" class="btn btn-outline-danger" onclick="campoVacio();">Iniciar Sesion</button>
+
+
+
+            <div class="col-md-4 m-auto text-center"><a href="javascript:void(0);">Olvidaste tu Contraseña?</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="RegistroCliente.html">Crear Cuenta</a></div>
+
+        </div>
+
+    </form>
+
+
+
+    <!-- Fin Formulario-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/controladores/controladorLoginUsuario.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

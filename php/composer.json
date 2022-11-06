@@ -1,0 +1,13 @@
+{
+    "name": "user/tienda",
+    "description": "POO Denis Sevilla",
+    "authors": [
+        {
+            "name": "DENISO700",
+            "email": "60415650+DENISO700@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "kreait/firebase-php": "4.32"
+    }
+}
