@@ -55,7 +55,15 @@
     </header>
     <!-- FIN CABEZERA-->
 
-
+    <!-- Bienvenida -->
+    <div class="row">
+        <div class="container carrusel">
+            <h5 class="bienvenida">
+                Bienvenidos a Ichiraku
+            </h5>
+        </div>
+    </div>
+    <!-- Bienvenida -->
 
     <!-- Inicio Slider-->
     <div class="row">
@@ -74,15 +82,7 @@
     </div>
     <!-- Fin Slider -->
 
-    <!-- Bienvenida -->
-    <div class="row">
-        <div class="container carrusel">
-            <h5 class="bienvenida">
-                Bienvenidos a Ichiraku
-            </h5>
-        </div>
-    </div>
-    <!-- Bienvenida -->
+
 
     <!-- ALL JS FILES -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
