@@ -3,6 +3,7 @@ var usuario = [];
 
 var indice;
 
+test=['Denis Ordoñez','sevilladenis97@gmail.com','9517-3789']
 
 function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -90,50 +91,8 @@ function obtenerUsuario() {
     </div>
 </div>
 
-<div class="row">
-    <!-- Perfiles Emppresariales -->
-    <div class="col-xl-10 col-md-10 mx-auto mb-4">
-        <div class="card border-left-success shadow h-100 py-2">
-            <div class="card-body">
-                <div class="account-box">
-                    <div class="service-box">
-                        <div class="service-icon">
-                            <a href="Empresas.php?id=${id}"> <i class="fa fa-building"></i></i>
-                            </a>
-                        </div>
-                        <div class="service-desc">
-                            <h4>Empresas</h4>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <!-- Empresas Favoritas -->
-    <div class="col-xl-10 col-md-10 mx-auto mb-4">
-        <div class="card border-left-info shadow h-100 py-2">
-            <div class="card-body">
-                <div class="account-box">
-                    <div class="service-box">
-                        <div class="service-icon">
-                            <a href="EmpresasFavoritas.php?id=${id}"><i class="fa fa-clipboard" ></i></a>
-                        </div>
-                        <div class="service-desc">
-                            <h4>Empresas Favoritas</h4>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-    
+  
     
     `
 
@@ -164,48 +123,8 @@ function obtenerUsuario() {
 
 </div>
 
-<div class="row">
-    <!-- Favoritas Promos-->
-    <div class="col-xl-10 col-md-10 mx-auto mb-4">
-        <div class="card border-left-danger shadow h-100 py-2">
-            <div class="card-body">
-                <div class="account-box">
-                    <div class="service-box">
-                        <div class="service-icon">
-                            <a href="deseos.php?id=${id}"><i class="fa fa-archive" ></i></a>
-                        </div>
-                        <div class="service-desc">
-                            <h4>Promociones Favoritas</h4>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <!-- Comprar-->
-    <div class="col-xl-10 col-md-10 mx-auto mb-4">
-        <div class="card border-left-dark shadow h-100 py-2">
-            <div class="card-body">
-                <div class="account-box">
-                    <div class="service-box">
-                        <div class="service-icon">
-                            <a href="carrito.php?id=${id}"><i class="fa fa-paperclip" ></i></a>
-                        </div>
-                        <div class="service-desc">
-                            <h4>Comprar</h4>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-    
+   
     `
 
 
