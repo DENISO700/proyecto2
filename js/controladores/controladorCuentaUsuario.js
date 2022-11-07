@@ -21,19 +21,19 @@ var id = getParameterByName('id');
 function obtenerUsuario() {
 
     //Peticion Asincrona
-    axios({
+    // axios({
 
-        method: 'GET', //metodo de solicitud
-        url: url + `?id=${id}`, //url del API
-        responseType: 'json', //tipo de respuesta
-    }).then(res => { //inicia la promesa
+    //     method: 'GET', //metodo de solicitud
+    //     url: url + `?id=${id}`, //url del API
+    //     responseType: 'json', //tipo de respuesta
+    // }).then(res => { //inicia la promesa
 
         document.getElementById("datos").innerHTML =
 
             `
     
     <div class="col-md-12 m-auto text-center">
-    <h1 class=" mt-3" style="font-weight: bold;">${res.data.nombre}</h1>
+    <h1 class=" mt-3" style="font-weight: bold;">${test[0]}</h1>
 </div>
 
 <div class="col-md-12 m-auto">
@@ -41,11 +41,11 @@ function obtenerUsuario() {
 </div>
 
 <div class="col-md-12 mb-3">
-    <h1> <b>Correo : </b>${res.data.correo}</h1>
+    <h1> <b>Correo : </b>${test[1]}</h1>
 </div>
 
 <div class="col-md-12 mb-3">
-    <h1> <b>Telefono: </b>${res.data.telefono}</h1>
+    <h1> <b>Telefono: </b>${test[2]}</h1>
 </div>
 
 <div class="col-md-12 mb-3">
@@ -131,9 +131,9 @@ function obtenerUsuario() {
 
 
 
-    }).catch(error => { //captura de errores
-        console.error(error); //imprime un erro en caso de existir
-    });
+    // }).catch(error => { //captura de errores
+    //     console.error(error); //imprime un erro en caso de existir
+    // });
 
 
 
