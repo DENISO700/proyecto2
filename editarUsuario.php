@@ -1,31 +1,3 @@
-
-
-
-<?php
-
-session_start();
-
-if (!isset($_SESSION["token"])) {
-   header("location: 401.html");
-}
-
-if (!isset($_COOKIE["token"])) {
-    header("location: 401.html");
- }
-
- if ($_SESSION["token"] != $_COOKIE["token"]) {
-    header("location: 401.html");
- }
-
- if ($_COOKIE["tipo"] !=1) {//verificar que el empresa solo vea paginas de empresa 
-    header("location: 401.html");//asistencia de Vanesa
- }
-
-
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 

@@ -46,7 +46,7 @@
 
                             <li class="nav-item"><a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal"><i class="fa fa-power-off" ></i>&nbsp;&nbsp;Cerrar Sesion</a></li>
 
-
+                            <li class="nav-item"><a class="nav-link" href="tienda.php?id=${id}"><i class="fa fa-shopping-bag" ></i>&nbsp;&nbsp;Tienda </a></li>
 
                         </ul>
                     </div>
