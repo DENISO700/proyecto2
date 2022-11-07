@@ -34,7 +34,7 @@
 
 </head>
 
-<body onload="regresar(); ">
+<body >
 
     <!-- CABEZERA-->
     <header class="main-header">
@@ -53,7 +53,7 @@
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp" style="color: white;">
 
                     <li class="nav-item"><a class="nav-link" href="my-account.php?id=${id}"><i class="fa fa-shopping-bag" ></i>&nbsp;&nbsp;Tienda </a></li>
-
+                    <li class="nav-item"><a class="nav-link" href="#" onclick=" window.history.back();"><i class="fa fa-undo" ></i>&nbsp;&nbsp;Regresar</a></li>
                     </ul>
 
 

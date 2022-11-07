@@ -291,9 +291,6 @@ function listaTienda() {
 //Funcion que muestra las categorias
 
 
-
-
-
 ////////////////////////////////////////////////////////////////////////////
 
 //Funcion que muestra los comentarios
