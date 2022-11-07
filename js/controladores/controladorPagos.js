@@ -96,7 +96,7 @@ function cancelarSubscripcion() {
 
 
         alert("Registro Cancelado lo esperamos pronto");
-        location.href = 'index.html';
+        location.href = 'index.php';
 
 
 
