@@ -112,7 +112,7 @@ function obtenerUsuario() {
                             <a href="tienda.php?id=${id}"><i class="fa fa-paperclip" ></i></a>
                         </div>
                         <div class="service-desc">
-                            <h4>Tienda</h4>
+                            <h4>Biblioteca</h4>
 
                         </div>
                     </div>
