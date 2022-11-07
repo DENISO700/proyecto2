@@ -42,12 +42,7 @@
 
                     <div class="collapse navbar-collapse" id="navbar-menu">
                         <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp" style="color: white;">
-
-
                             <li class="nav-item"><a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal"><i class="fa fa-power-off" ></i>&nbsp;&nbsp;Cerrar Sesion</a></li>
-
-                            <li class="nav-item"><a class="nav-link" href="tienda.php?id=${id}"><i class="fa fa-shopping-bag" ></i>&nbsp;&nbsp;Biblioteca </a></li>
-
                         </ul>
                     </div>
 
