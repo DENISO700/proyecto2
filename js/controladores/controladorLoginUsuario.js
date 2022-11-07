@@ -15,7 +15,8 @@ function campoVacio() {
         return false;
     } else {
 
-        login();
+       // login();
+       window.location.href = "my-account.php"
         return true;
     }
 }

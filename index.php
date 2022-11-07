@@ -22,7 +22,7 @@
 
 </head>
 
-<body onload="Categorias();obtenerPlanes();Slider();">
+<body onload="Slider();">
 
 
     <!-- CABEZERA -->
@@ -83,10 +83,6 @@
         </div>
     </div>
     <!-- Bienvenida -->
-
-
-
-    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
     <!-- ALL JS FILES -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
