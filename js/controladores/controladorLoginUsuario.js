@@ -16,7 +16,7 @@ function campoVacio() {
     } else {
 
        // login();
-       window.location.href = "my-account.php"
+       window.location.href = "tienda.php"
         return true;
     }
 }
