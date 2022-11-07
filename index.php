@@ -44,18 +44,7 @@
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
 
-                        <li class="nav-item"><a class="nav-link" href="acerca-de.html"><i class="fa fa-globe" ></i>&nbsp;&nbsp;Quienes Somos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="catalogo.html"><i class="fa fa-percent" ></i>&nbsp;&nbsp;Promociones</a></li>
-
-                        <li class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown"><i class="fa fa-user-circle" ></i>&nbsp;&nbsp;Iniciar Sesion</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="login.html">&nbsp;&nbsp;<i class="fa fa-male" ></i>&nbsp;&nbsp;Cliente</a></li>
-                                <li><a href="loginEmpresa.html"><i class="fa fa-users" ></i>&nbsp;&nbsp;Empresa</a></li>
-                                <li class="nav-item"><a data-toggle="modal" data-target="#logoutModal"><i class="fa fa-address-book"  ></i>&nbsp;&nbsp;Registrarse</a></li>
-
-                            </ul>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="login.html"><i class="fa fa-globe" ></i>&nbsp;&nbsp;Iniciar Sesion</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
