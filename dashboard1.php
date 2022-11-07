@@ -1,33 +1,3 @@
-
-
-
-<?php
-
-session_start();
-
-if (!isset($_SESSION["token"])) {
-   header("location: 401.html");
-}
-
-if (!isset($_COOKIE["token"])) {
-    header("location: 401.html");
- }
-
- if ($_SESSION["token"] != $_COOKIE["token"]) {
-    header("location: 401.html");
- }
-
- if ($_COOKIE["tipo"] !=2) {//verificar que el usuario solo vea paginas de usuario 
-    header("location: 401.html");
- }
-
-
-
-?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
