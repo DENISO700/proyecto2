@@ -95,7 +95,7 @@ function validarUsuario() {
 
     valor = document.getElementById("correo").value;
     valor2 = document.getElementById("contraseña").value;
-    valor3 = document.getElementById("telefono").value;
+    valor3 = document.getElementById("nombre").value;
     valor4 = document.getElementById("user").value;
 
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

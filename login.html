@@ -64,15 +64,16 @@
 
     <!-- Formulario -->
 
-    <form>
+    <form action="backend/login.php" method="POST">
 
         <div class="col-12  text-center">
 
             <div class="col-md-4 m-auto"><img src="images/user.png" class="user m-auto "></div><br>
-            <div class="col-md-4  text-center m-auto pb-4"><input type="text" placeholder="Email" name="usuario" id="correo" autofocus class="login-text form-control" required></div>
+            <div class="col-md-4  text-center m-auto pb-4">
+                <input type="text" placeholder="Email" name="usuario" id="correo" autofocus class="login-text form-control" required></div>
 
             <div class="col-md-4  text-center m-auto pb-3">
-                <input type="password" placeholder="Contraseña" id="contraseña" name="contraseña" class="login-text form-control" required>
+                <input type="password" placeholder="Contraseña" id="contraseña" name="contra" class="login-text form-control" required>
             </div>
             <div class="col-md-4 m-auto text-left pb-3">
                 <label for="Rellenar" class="chek-login"><input type="checkbox" id="Rellenar" checked>Mantenerme Registrado</label>
@@ -80,7 +81,7 @@
 
             <div class="alert alert-danger" id="error" style="display: none;"></div>
 
-            <button type="button" class="btn btn-outline-danger" onclick="campoVacio();">Iniciar Sesion</button>
+            <button type="submit" class="btn btn-outline-danger" >Iniciar Sesion</button>
 
 
 

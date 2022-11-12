@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="css/responsive.css">
     </head>
 
-    <body onload="tablaEmpresas();tablaPlanes();categorias();">
+    <body >
 
         <!-- CABEZERA-->
         <header class="main-header">

@@ -19,7 +19,7 @@
 
 </head>
 
-<body onload="update_qrcode();regresar();">
+<body onload="regresar();">
 
 
     <!-- CABEZERA -->
@@ -158,17 +158,11 @@
 </body>
 <!-- ALL JS FILES -->
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="js/controladores/controladorFicha.js"></script>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <!-- ALL PLUGINS -->
 <script src="js/jquery.superslides.min.js"></script>
-
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
-
-<script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
 
 
 </html>

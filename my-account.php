@@ -1,3 +1,7 @@
+
+<?php
+session_start()
+?>
 <!DOCTYPE html>
     <html lang="en">
 
@@ -6,7 +10,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Cuenta Cliente</title>
+        <title>Cuenta Usuario</title>
         <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 
 
@@ -74,21 +78,73 @@
             <div class="row">
 
                 <div class=" col-md-4 " id="izquierda">
-
+                    <div class="row">
+                        <!-- Editar Perfil -->
+                        <div class="col-xl-10 col-md-10 mx-auto mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="account-box">
+                                        <div class="service-box">
+                                            <div class="service-icon">
+                                                <a href="editarUsuario.php?id=${id}"><i class="fa fa-pencil-square-o" ></i></a>
+                                            </div>
+                                            <div class="service-desc">
+                                                <h4>Editar Perfil</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
 
                 </div>
 
                 <div class="col-md-4 bg-success mb-4" id="datos">
+                    <div class="col-md-12 m-auto text-center">
+                        <h1 class=" mt-3" style="font-weight: bold;"><?php echo $_SESSION["nombre_completo"]?></h1>
+                    </div>
 
+                    <div class="col-md-12 m-auto">
+                        <img src="images/user.png" class="w-75 my-3 ml-5 img-thumbnail" style="border-radius: 150px;">
+                    </div>
 
+                    <div class="col-md-12 mb-3">
+                        <h1> <b>Correo : </b><?php echo $_SESSION["correo_personal"]?></h1>
+                    </div>
+
+                    <div class="col-md-12 mb-3">
+                        <h1> <b>Usuario: </b><?php echo $_SESSION["nombre_usuario"]?></h1>
+                    </div>
 
                 </div>
 
                 <div class="col-md-4" id="derecha">
 
+                    <div class="row">
 
+                            <!-- Tienda -->
+                            <div class="col-xl-10 col-md-10 mx-auto mb-4">
+                                <div class="card border-left-warning shadow h-100 py-2">
+                                    <div class="card-body">
+                                        <div class="account-box">
+                                            <div class="service-box">
+                                                <div class="service-icon">
+                                                    <a href="tienda.php?id=<?php echo $_SESSION["id"]?>"><i class="fa fa-paperclip" ></i></a>
+                                                </div>
+                                                <div class="service-desc">
+                                                    <h4>Biblioteca</h4>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                    </div>
 
                 </div>
 
@@ -120,36 +176,12 @@
 
         <!-- ALL JS FILES -->
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <script src="js/controladores/controladorCuentaUsuario.js"></script>
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <!-- ALL PLUGINS -->
         <script src="js/jquery.superslides.min.js"></script>
 
-        <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js "></script>
+</body>
 
-
-
-<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-storage.js "></script>
-
-
-<script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyABLN9vwlWTgyrLkB9R7PzUUxzTBHUcmfs",
-        authDomain: "ichiraku-7a7bb.firebaseapp.com",
-        databaseURL: "https://ichiraku-7a7bb.firebaseio.com",
-        projectId: "ichiraku-7a7bb",
-        storageBucket: "ichiraku-7a7bb.appspot.com",
-        messagingSenderId: "657807192414",
-        appId: "1:657807192414:web:4df903049b35593673dfcf",
-        measurementId: "G-7Q422C1KK7"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-</script>
-
-    </body>
-
-    </html>
+</html>

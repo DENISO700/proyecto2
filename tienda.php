@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tienda </title>
+    <title>Biblioteca </title>
 
     <!-- Font Awesome CSS -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -18,20 +18,8 @@
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
 
-    <link href="css/starrr.css" rel=stylesheet/>
-
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
  
- 
-   
-   
-    
-    
-
-    <script src="js/starrr.js"></script>
-    
-    
-
 </head>
 
 <body >
@@ -73,7 +61,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Tienda</h2>
+                    <h2>Biblioteca Ichiraku</h2>
 
                 </div>
             </div>
@@ -171,7 +159,7 @@
                         <div class="filter-sidebar-left">
 
                             <div class="title-left">
-                                <h3>Categorias</h3>
+                                <h3>Clases</h3>
                             </div>
 
                             <div class="list-group list-group-collapse list-group-sm list-group-tree" id="list-group-men" data-children=".sub-men">
@@ -199,179 +187,15 @@
     </div>
     <!-- FIN TIENDA-->
 
-  
-
-
-    <!-- Modal Vista Previa -->
-
-    <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable" role="document">
-            <div class="modal-content ">
-
-
-
-                <div class="modal-body " style="background-color: darkgray;">
-
-                    <div class="container p-3 datos-ser">
-
-                        <div class="row">
-                            <div class="col-12  text-left" style="background-color: darkgray;">
-                                <h1 id="exampleModalLabel" class="titulo-Sucursal">DETALLES <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span style="font-weight: bold;">X</span></button></h1>
-                                <hr>
-                            </div>
-                        </div>
-
-                        <div class="row " id="cuerpo">
-
-                        </div>
-
-                        <div class="row mb-3 " id="carrusel" style="height: 500px;">
-
-
-                            <div class="col-4  p-3">
-
-
-
-
-                                <div style="height: 50px;" id="img">
-
-
-                                </div>
-
-
-                                <div class="datos-sucursal" style="height: 450px;" id="date">
-
-
-                                </div>
-
-
-
-                            </div>
-
-                            <div class="col-8">
-                                <div class=" my-3 p-3 " style="width: 680px;" id="coor">
-                                    <div id="demo">
-                                        <h1 style="text-align: center;">Ubicacion de la Sucursal</h1>
-                                    </div>
-                                    <div id="mapholder" class="m-auto " style="height: 420px;">
-
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-
-
-
-
-
-                        </div>
-
-
-
-                    </div>
-
-
-
-
-
-                </div>
-
-
-
-
-            </div>
-
-
-
-        </div>
-    </div>
-    <!-- FinModal Vista Previa -->
-
-
-    <!-- Modal Comentar -->
-    <div class="modal fade" id="exampleModalScrollable2" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-          
-          <div class="modal-content">
-
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalScrollableTitle">Comentarios</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-           </button>
-         </div>
-
-         
-         
-                <div class="modal-body">
-
-                   
-                   <div class="container" style="width:100%; height:400px; overflow: scroll;" id="comentarios2"></div>
-
-                   <div class="container mt-3">
-                    Calificar: <span id="Estrellas"></span>
-                    <input type="hidden" id="valor">
-                  </div>
-
-                  <div class="container" id="nuevo"></div>
-
-
-
-                 
-                   
-
-                </div>
-
-
-            </div>
-
-
-
-        </div>
-
-    </div>
-      <!-- FinModal Vista Previa -->
-
-
-
-  
-  
+ 
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
     <!-- ALL JS FILES -->
 
     <script src="js/custom.js"></script>
 
-    <script>
-
-
-   $('#Estrellas').starrr({
-    
-
-       rating:0,
-       change:function(e,valor){
-         
-     
-            document.getElementById("valor").value =valor;
-            
-      
-       
-        
-      
-           
-       }
-       
-   });
-    
-    </script>
-
-   
+  
     <!-- ALL JS FILES -->
-    <script src="http://maps.google.com/maps/api/js?sensor=false">
-        //API de Google Maps
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/controladores/controladorTienda.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>

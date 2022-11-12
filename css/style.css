@@ -1833,6 +1833,7 @@
     }
     
     .contenedor-form input[type="text"],
+    .contenedor-form select,
     .contenedor-form input[type="password"],
     .contenedor-form input[type="email"] {
         outline: none;
@@ -1852,6 +1853,7 @@
     }
     
     .contenedor-form input[type="text"]:focus,
+    .contenedor-form select:focus,
     .contenedor-form input[type="password"]:focus,
     .contenedor-form input[type="email"]:focus {
         border-bottom: 4px solid #0075d9;
@@ -1884,12 +1886,14 @@
     }
     
     .contenedor-form-empresa input[type="text"],
+    .contenedor-form-empresa select,
     .contenedor-form-empresa input[type="password"],
     .contenedor-form-empresa input[type="email"] {
         display: block;
         width: 90%;
+        height: 45px;
         padding: 10px 15px;
-        margin: 20px 0 20px 30px;
+        margin: 15px 0 15px 20px;
         background: white;
         color: black;
         border-radius: 2px;
@@ -1904,6 +1908,7 @@
     }
     
     .contenedor-form-empresa input[type="text"]:focus,
+    .contenedor-form-empresa select:focus,
     .contenedor-form-empresa input[type="password"]:focus,
     .contenedor-form-empresa input[type="email"]:focus {
         border-bottom: 4px solid #0075d9;
