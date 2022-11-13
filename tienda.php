@@ -108,11 +108,39 @@
                                 <div role="tabpanel" class="tab-pane fade show active" id="grid-view">
 
                                     <div class="row" id="celdas">
-
-
-
-
                                     </div>
+
+                                    <?php
+                                        require_once "backend/database.php";
+                                        $sql = "SELECT * FROM `libros` WHERE `titulo` LIKE '%test%'";
+                                        $consulta = mysqli_query ($conn,$sql) ;
+
+
+                                        While ($row=mysqli_fetch_assoc($consulta)){
+    
+                                            echo '<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">';
+                                                echo '<div class="products-single fix">';
+                                                    echo '<div class="box-img-hover">';
+                                                        echo '<img height="100" width="100" src="data:'.$row["tipo_imagen"].';base64,'.base64_encode($row["binario_imagen"]).'"/>';
+                                                        echo '<div class="mask-icon">';
+                                                            echo ' <ul>';
+                                                    
+                                                                echo `<li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="right" title="Favoritos" ><i class="far fa-heart"></i></a></li>`;
+                                                            echo '</ul>';
+                                                            echo `<a class="cart" href="javascript:void(0);" >Agregar al Carrito</a>`;
+                                                    echo '</div>';
+                                                    echo '</div>';
+                                                    echo '<div class="why-text ">';
+                                                    echo '    <h4>'.$row['titulo'].'</h4>';
+                                                    echo '    <h5>'.$row['autor'].'</h5>';
+                                                    echo ' </div>';
+                                                echo ' </div>';
+                                            echo ' </div>';
+                                            
+
+                                        }
+
+                                    ?>
 
                                 </div>
                                 <!-- Fin Vista Celdas-->

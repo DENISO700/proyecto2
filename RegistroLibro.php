@@ -74,37 +74,50 @@
 
                         <!-- Datos Generales -->
                             <div class="row">
-                                <div class=" col-md-4 mb-3 mt-5">
-                                    <input class="form-control" type="text" placeholder="Nombre del Libro" required id="nombreProducto">
-                                    <input id="name" name="nombre" type="hidden" >
-                                    <input id="correo" name="correo" type="hidden" >
-                                </div>
-                                <div class="col-md-4 mb-3 mt-5">
+                                <!-- <div class=" col-md-4 mb-3 mt-5">
+                                    <input class="form-control" type="text" placeholder="Nombre del Libro" required name="nombre_libro" id="nombreProducto">
+                                </div> -->
+                                <div class="col-md-5 mx-4 mb-3 mt-5">
                                     <div class="custom-file ">
 
                                         <label class="custom-file-label mt-3" id="ruta" >Seleccione Foto del Libro</label>
-                                        <input name="archivo[]"  type='file' id="imgInp"  class="custom-file-input form-control" />
+                                        <input name="archivo1"  type='file' id="imgInp"  class="custom-file-input form-control" />
                                     </div>
 
                                 </div>
-                                <div class="col-md-4 mb-3 mt-3" id="img">
-                                    <img id="blah" src="images/log-placeholder.png" alt="your image" class="w-75" />
+
+                                <div class="col-md-5 mb-3 mt-5">
+                                    <div class="custom-file ">
+
+                                        <label class="custom-file-label mt-3" id="ruta" >Seleccione el Libro</label>
+                                        <input name="archivo2"  type='file' id="imgInp"  class="custom-file-input form-control" />
+                                    </div>
+
                                 </div>
+                                <!-- <div class="col-md-4 mb-3 mt-3" id="img">
+                                    <img id="blah" src="images/log-placeholder.png" alt="your image" class="w-75" />
+                                </div> -->
                             </div>
 
                             <div class="row">
                                 <div class="col-md-12 mb-3 mt-4">
-                                    <input type="text"  class="form-control" placeholder="Titulo" required >
+                                    <input type="text"  name="titulo" class="form-control" placeholder="Titulo" required >
                                 </div>
 
                                 <div class="col-md-12 mb-3 mt-4">
-                                    <input type="text"  class="form-control" placeholder="Autor" required >
+                                    <input type="text"  name="autor" class="form-control" placeholder="Autor" required >
                                 </div>
 
-                                <div class="col-md-6 mt-4">
+                                <div class="col-md-4 mt-4">
                                     <select required name="clase" class="form-control" id="categorias">
                                         <option value="">Clase</option>
                                     </select>
+                                </div>
+                                <div class="col-md-4 mt-4">
+                                    <input type="text"  name="pais" class="form-control" placeholder="Pais" required >
+                                </div>
+                                <div class="col-md-4 mt-4">
+                                    <input type="text"  name="año" class="form-control" placeholder="Año" required >
                                 </div>
 
                             </div>
@@ -121,19 +134,19 @@
                         <!-- Descripcion -->
                         <div class="row">
                             <div class="col-md-4 mb-3 mt-4">
-                                <input type="text"  class="form-control" placeholder="Editorial" required >
+                                <input type="text" name="editorial" class="form-control" placeholder="Editorial" required >
                             </div>
                             <div class="col-md-4 mb-3 mt-4">
-                                <input type="text"  class="form-control" placeholder="Fecha" required >
+                                <input type="text" name="fecha" class="form-control" placeholder="Fecha" required >
                             </div>
                             <div class="col-md-4 mb-3 mt-4">
-                                <input type="text"  class="form-control" placeholder="Edicion" required >
+                                <input type="text" name="edicion" class="form-control" placeholder="Edicion" required >
                             </div>
                             <div class="col-md-4 mb-3 mt-4">
-                                <input type="text"  class="form-control" placeholder="ISBN" required >
+                                <input type="text" name="ISBN" class="form-control" placeholder="ISBN" required >
                             </div>
                             <div class="col-md-4 mb-3 mt-4">
-                                <input type="text"  class="form-control" placeholder="N° Paginas" required >
+                                <input type="text" name="paginas" class="form-control" placeholder="N° Paginas" required >
                             </div>
                         </div>
                         <!-- Fin  -->

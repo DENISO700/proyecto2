@@ -25,6 +25,8 @@ if ($valido) {
     $_SESSION["nombre_completo"] = $row['nombre_completo'];
     $_SESSION["correo_personal"] = $row['correo_personal'];
     $_SESSION["nombre_usuario"] = $row['nombre_usuario'];
+    $_SESSION["tipo_imagen"] = $row['tipo_imagen'];
+    $_SESSION["binario_imagen"] = $row['binario_imagen'];
     $_SESSION["id"] = $row['id'];
     header("Location: ../../tienda.php");
 } else {

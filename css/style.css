@@ -1886,6 +1886,7 @@
     }
     
     .contenedor-form-empresa input[type="text"],
+    .contenedor-form-empresa input[type="file"],
     .contenedor-form-empresa select,
     .contenedor-form-empresa input[type="password"],
     .contenedor-form-empresa input[type="email"] {
@@ -1908,6 +1909,7 @@
     }
     
     .contenedor-form-empresa input[type="text"]:focus,
+    .contenedor-form-empresa input[type="file"]:focus,
     .contenedor-form-empresa select:focus,
     .contenedor-form-empresa input[type="password"]:focus,
     .contenedor-form-empresa input[type="email"]:focus {

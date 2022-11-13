@@ -3,16 +3,46 @@
 require_once "database.php";
  
 if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+    //$nombre_libro=$_POST['nombre_libro'];
+    $titulo=$_POST['titulo'];
+    $autor=$_POST['autor'];
+    $pais=$_POST['pais'];
+    $año=$_POST['año'];
+    $edicion=$_POST['edicion'];
+    $editorial=$_POST['editorial'];
+    $correo_personal=$_POST['fecha'];
+    $ISBN=$_POST['ISBN'];
+    $correo_personal=$_POST['paginas'];
+    $clase=$_POST['clase'];
+
+
+    //archivo
+    $nombre_archivo=$_FILES['archivo2']['tmp_name'] ;
+    $binario_contenido = addslashes(fread(fopen($nombre_archivo, "rb"), filesize($nombre_archivo)));
+    $nombre_archivo=$_FILES['archivo2']['name'];
+    $tamaño_archivo=$_FILES['archivo2']['size'];
+    $tipo_archivo=$_FILES['archivo2']['type'];
+
+    //imagen
+    $imagen_portada=$_FILES['archivo1']['tmp_name'] ;
+    $imagen_binaria=addslashes(fread(fopen($imagen_portada, "rb"), filesize($imagen_portada)));
+    $nombre_imagen=$_FILES['archivo1']['name'];
+    $tamaño_imagen=$_FILES['archivo1']['size'];
+    $tipo_imagen=$_FILES['archivo1']['type'];
     
-$consulta_insertar = "INSERT INTO `libros`(`id`, `ISBN`, `titulo`, `autor`, `pais`, `año`, `edicion`, `editorial`, `tamaño_archivo`, `tipo_archivo`, `nombre_archivo`, `imagen_portada`) 
-VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]','[value-8]','[value-9]','[value-10]','[value-11]','[value-12]')";
-mysqli_query ($conn,$consulta_insertar) or die("No se pudo insertar los datos en la base de datos.");
+    $consulta_insertar = "INSERT INTO `libros`(`ISBN`,`clase`, `titulo`, `autor`, `pais`, `año`, `edicion`, `editorial`,`archivo_binario`, `tamaño_archivo`, `tipo_archivo`, `nombre_archivo`,`binario_imagen`, `tamaño_imagen`, `tipo_imagen`,`imagen_portada`) 
+    VALUES ('$ISBN','$clase','$titulo',' $autor',' $pais','$año','$edicion','$editorial','$binario_contenido','$tamaño_archivo','$tipo_archivo','$nombre_archivo','$imagen_binaria','$tamaño_imagen','$tipo_imagen','$nombre_imagen')";
+    mysqli_query ($conn,$consulta_insertar) or die("No se pudo insertar los datos en la base de datos.");
+
+    header("location: ../../SuperAdministrador.php");  
+
 }
 
 if($_SERVER["REQUEST_METHOD"] == "PUT"){
-    
-$consulta_actualizar = "UPDATE `libros` SET `id`='[value-1]',`ISBN`='[value-2]',`titulo`='[value-3]',`autor`='[value-4]',`pais`='[value-5]',`año`='[value-6]',`edicion`='[value-7]',`editorial`='[value-8]',`tamaño_archivo`='[value-9]',`tipo_archivo`='[value-10]',`nombre_archivo`='[value-11]',`imagen_portada`='[value-12]' WHERE 1";
-mysqli_query ($conn,$consulta_actualizar) or die("No se pudo insertar los datos en la base de datos.");
+        
+    $consulta_actualizar = "UPDATE `libros` SET `id`='[value-1]',`ISBN`='[value-2]',`titulo`='[value-3]',`autor`='[value-4]',`pais`='[value-5]',`año`='[value-6]',`edicion`='[value-7]',`editorial`='[value-8]',`tamaño_archivo`='[value-9]',`tipo_archivo`='[value-10]',`nombre_archivo`='[value-11]',`imagen_portada`='[value-12]' WHERE 1";
+    mysqli_query ($conn,$consulta_actualizar) or die("No se pudo insertar los datos en la base de datos.");
 }
 
 

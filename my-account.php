@@ -108,16 +108,29 @@ session_start()
                     </div>
 
                     <div class="col-md-12 m-auto">
-                        <img src="images/user.png" class="w-75 my-3 ml-5 img-thumbnail" style="border-radius: 150px;">
+                        <img  <?php
+                        if($_SESSION['binario_imagen']==NULL){ echo 'src="images/user.png"';}else{
+                            echo 'src="data:'.$_SESSION["tipo_imagen"].';base64,'.base64_encode($_SESSION["binario_imagen"]).'"';}?> class="w-75 my-3 ml-5 img-thumbnail" style="border-radius: 150px;"/>`;
+                   
                     </div>
 
-                    <div class="col-md-12 mb-3">
-                        <h1> <b>Correo : </b><?php echo $_SESSION["correo_personal"]?></h1>
-                    </div>
+                    <form enctype="multipart/form-data" action="backend/actualizarFoto.php" method="POST">
+                        <div class="col-md-12 mb-4 custom-file ">
+                            <label class="custom-file-label mt-3" id="ruta" >Actualizar Imagen de Perfil</label>
+                            <input name="foto"  type='file' id="imgInp"  class="custom-file-input form-control" />
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <h1> <b>Correo : </b><?php echo $_SESSION["correo_personal"]?></h1>
+                        </div>
 
-                    <div class="col-md-12 mb-3">
-                        <h1> <b>Usuario: </b><?php echo $_SESSION["nombre_usuario"]?></h1>
-                    </div>
+                        <div class="col-md-12 mb-3">
+                            <h1> <b>Usuario: </b><?php echo $_SESSION["nombre_usuario"]?></h1>
+                        </div>
+
+                        <div>
+                            <input type="submit" name="actualizar" class="form-control mb-3" value="Actualizar Perfil">
+                        </div>
+                    </form>
 
                 </div>
 
