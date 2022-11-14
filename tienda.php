@@ -89,34 +89,30 @@
                                 <div role="tabpanel" class="tab-pane fade show active" id="grid-view">
 
                                     <div class="row" id="celdas">
-                                    </div>
-
-                                    <?php
-                                        require_once "backend/database.php";
-                                        $sql = "SELECT * FROM `libros` WHERE `titulo` LIKE '%test%'";
-                                        $consulta = mysqli_query ($conn,$sql) ;
+                                        <?php
+                                            require_once "backend/database.php";
+                                            $sql = "SELECT * FROM `libros` WHERE `titulo` LIKE '%test%'";
+                                            $consulta = mysqli_query ($conn,$sql) ;
 
 
-                                        
-                                        While ($row=mysqli_fetch_assoc($consulta)){
-    
-                                            echo '<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">';
-                                                echo '<div class="products-single fix">';
-                                                    echo '<div class="box-img-hover">';
-                                                        echo '<img height="100" width="100" src="data:'.$row["tipo_imagen"].';base64,'.base64_encode($row["binario_imagen"]).'"/>';
+                                            
+                                            While ($row=mysqli_fetch_assoc($consulta)){
+                                                echo '<div class="card col-3 mx-3">';
+                                                echo '<img src="data:'.$row["tipo_imagen"].';base64,'.base64_encode($row["binario_imagen"]).'"/>';
+
+                                                    echo '<div class="card-body">';
+                                                        echo '<h1 class="card-title">'.$row['titulo'].'</h1>';
+                                                        echo '<p class="card-info">'.$row['autor'].'</p>';
+                                                        echo '<a href="detallesLibro.php?libro='.$row['id'].'">Detalles</a>';
                                                     echo '</div>';
-                                                    echo '<div class="why-text ">';
-                                                    echo '    <h4>'.$row['titulo'].'</h4>';
-                                                    echo '    <h5>'.$row['autor'].'</h5>';
-                                                    echo '    <span><a href="detallesLibro.php?libro='.$row['id'].'">Detalles</a></span>';
-                                                    echo ' </div>';
-                                                echo ' </div>';
-                                            echo ' </div>';
+                                                echo '</div>';
+
                                             
 
-                                        }
+                                            }
 
-                                    ?>
+                                        ?>
+                                    </div>
 
                                 </div>
                                 <!-- Fin Vista Celdas-->
