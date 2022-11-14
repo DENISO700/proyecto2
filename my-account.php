@@ -77,31 +77,6 @@ session_start()
 
             <div class="row">
 
-                <div class=" col-md-4 " id="izquierda">
-                    <div class="row">
-                        <!-- Editar Perfil -->
-                        <div class="col-xl-10 col-md-10 mx-auto mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="account-box">
-                                        <div class="service-box">
-                                            <div class="service-icon">
-                                                <a href="editarUsuario.php?id=${id}"><i class="fa fa-pencil-square-o" ></i></a>
-                                            </div>
-                                            <div class="service-desc">
-                                                <h4>Editar Perfil</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                </div>
-
                 <div class="col-md-4 bg-success mb-4" id="datos">
                     <div class="col-md-12 m-auto text-center">
                         <h1 class=" mt-3" style="font-weight: bold;"><?php echo $_SESSION["nombre_completo"]?></h1>

@@ -80,25 +80,6 @@
                 <div class="col-xl-9 col-lg-9 col-sm-12 col-xs-12 shop-content-right">
 
                     <div class="right-product-box">
-
-                        <!-- Tipo de Vista-->
-                        <div class="product-item-filter row">
-
-                            <div class="col-12 col-sm-4 text-center text-sm-right">
-                                <ul class="nav nav-tabs ml-auto">
-
-                                    <li>
-                                        <a class="nav-link active ml-auto" href="#grid-view" data-toggle="tab"> <i class="fa fa-th"></i> Ver en Miniaturas</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link ml-auto" href="#list-view" data-toggle="tab"> <i class="fa fa-list-ul"></i> Ver en Detalles </a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-                        <!-- Fin Tipo de Vista-->
-
                         <!-- Productos-->
                         <div class="product-categorie-box">
 
@@ -116,23 +97,18 @@
                                         $consulta = mysqli_query ($conn,$sql) ;
 
 
+                                        
                                         While ($row=mysqli_fetch_assoc($consulta)){
     
                                             echo '<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">';
                                                 echo '<div class="products-single fix">';
                                                     echo '<div class="box-img-hover">';
                                                         echo '<img height="100" width="100" src="data:'.$row["tipo_imagen"].';base64,'.base64_encode($row["binario_imagen"]).'"/>';
-                                                        echo '<div class="mask-icon">';
-                                                            echo ' <ul>';
-                                                    
-                                                                echo `<li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="right" title="Favoritos" ><i class="far fa-heart"></i></a></li>`;
-                                                            echo '</ul>';
-                                                            echo `<a class="cart" href="javascript:void(0);" >Agregar al Carrito</a>`;
-                                                    echo '</div>';
                                                     echo '</div>';
                                                     echo '<div class="why-text ">';
                                                     echo '    <h4>'.$row['titulo'].'</h4>';
                                                     echo '    <h5>'.$row['autor'].'</h5>';
+                                                    echo '    <span><a href="detallesLibro.php?libro='.$row['id'].'">Detalles</a></span>';
                                                     echo ' </div>';
                                                 echo ' </div>';
                                             echo ' </div>';
@@ -216,25 +192,12 @@
     <!-- FIN TIENDA-->
 
  
-    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
-
     <!-- ALL JS FILES -->
-
-    <script src="js/custom.js"></script>
-
-  
-    <!-- ALL JS FILES -->
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/controladores/controladorTienda.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- ALL PLUGINS -->
-    <script src="js/jquery.superslides.min.js"></script>
-    <script src="js/inewsticker.js"></script>
-    <script src="js/images-loded.min.js"></script>
-    <script src="js/isotope.min.js"></script>
-    <script src="js/baguetteBox.min.js"></script>
     <script src="js/custom.js"></script>
 
    

@@ -1,3 +1,7 @@
+
+<?php
+session_start()
+?>
 <!DOCTYPE html>
     <html lang="en">
 
@@ -20,8 +24,7 @@
     <body >
 
         <!-- CABEZERA-->
-        <header class="main-header">
-
+        <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
                 <div class="container" id="cabezera">
 
@@ -34,9 +37,7 @@
 
                     <div class="collapse navbar-collapse" id="navbar-menu">
                         <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp" style="color: white;">
-
                             <li class="nav-item"><a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal"><i class="fa fa-power-off" ></i>&nbsp;&nbsp;Cerrar Sesion</a></li>
-
                         </ul>
                     </div>
 
@@ -66,40 +67,63 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-md-12 text-center my-5">
-                    <h2>CATEGORIAS</h2>
+
+                <!-- Tienda -->
+                <div class="col-xl-6 col-md-10 mx-auto mb-4">
+                    <div class="card border-left-warning shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="account-box">
+                                <div class="service-box">
+                                    <div class="service-icon">
+                                        <a href="RegistroLibro.php?id=<?php echo $_SESSION["id"]?>"><i class="fa fa-paperclip" ></i></a>
+                                    </div>
+                                    <div class="service-desc">
+                                        <h4>Agregar Libro</h4>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
 
             <div class="row">
-
-                <div class="col-md-12 table-responsive">
-
-                    <table class="table table-hover">
-
+                <div class="col-6 mx-5">
+                    <table class="table caption-top">
+                        <caption>Lista de Libros</caption>
                         <thead>
-                            <th>Nombre</th>
-                            <th>.</th>
-                            <th>.</th>
-                        
+                            <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Handle</th>
+                            </tr>
                         </thead>
-
-                        <tbody id="categorias">
-
+                        <tbody>
+                            <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            </tr>
                         </tbody>
-
-
                     </table>
 
                 </div>
-
-                <div class="col-md-4 text-center">
-                    <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#categoriasModal">Nueva Categoria </button>
-                </div>
-
-
-
 
             </div>
 
@@ -107,40 +131,7 @@
            <!-- FIN PLANES-->
 
 
-        <!-- Modal Nuevo Categoria-->
-        <div class="modal fade" id="categoriasModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Creacion de Categoria</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-                </button>
-                    </div>
-                    <div class="modal-body">
 
-                        <form >
-
-                            <div class="form-group">
-                                <label for="recipient-name" class="col-form-label">Nombre:</label>
-                                <input type="text" class="form-control" id="categoriaNueva" required>
-                            </div>
-
-                          
-                           
-                                <button type="button" onclick="nuevaCategoria();">Registrar Plan</button>
-                           
-
-
-
-                        </form>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!-- Fin Modal Nuevo Plan-->
 
         <!-- Cerrar Sesion Modal-->
         <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

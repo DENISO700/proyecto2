@@ -39,13 +39,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 }
 
-if($_SERVER["REQUEST_METHOD"] == "PUT"){
-        
-    $consulta_actualizar = "UPDATE `libros` SET `id`='[value-1]',`ISBN`='[value-2]',`titulo`='[value-3]',`autor`='[value-4]',`pais`='[value-5]',`año`='[value-6]',`edicion`='[value-7]',`editorial`='[value-8]',`tamaño_archivo`='[value-9]',`tipo_archivo`='[value-10]',`nombre_archivo`='[value-11]',`imagen_portada`='[value-12]' WHERE 1";
-    mysqli_query ($conn,$consulta_actualizar) or die("No se pudo insertar los datos en la base de datos.");
-}
-
-
 ?>
 
 

@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="css/responsive.css">
     </head>
 
-    <body onload="regresar();">
+    <body >
 
         <!-- CABEZERA -->
         <header class="main-header">
