@@ -92,7 +92,7 @@
                                         <?php
                                             require_once "backend/database.php";
                                             $filtro = $_POST['filtro'];
-                                            $sql = "SELECT * FROM libros WHERE titulo = '%$filtro%' OR autor LIKE '%$filtro%'";
+                                            $sql = "SELECT * FROM libros WHERE titulo like '%$filtro%' OR autor LIKE '%$filtro%'";
                                             $consulta = mysqli_query ($conn,$sql) ;
                                             While ($row=mysqli_fetch_assoc($consulta)){
                                                 echo '<div class="card col-3 mx-3">';
