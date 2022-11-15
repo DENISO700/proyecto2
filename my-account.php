@@ -95,11 +95,11 @@ session_start()
                             <input name="foto"  type='file' id="imgInp"  class="custom-file-input form-control" />
                         </div>
                         <div class="col-md-12 mb-3">
-                            <h1> <b>Correo : </b><?php echo $_SESSION["correo_personal"]?></h1>
+                            <h2> <b>Correo : </b><?php echo $_SESSION["correo_personal"]?></h2>
                         </div>
 
                         <div class="col-md-12 mb-3">
-                            <h1> <b>Usuario: </b><?php echo $_SESSION["nombre_usuario"]?></h1>
+                            <h2> <b>Usuario: </b><?php echo $_SESSION["nombre_usuario"]?></h2>
                         </div>
 
                         <div>

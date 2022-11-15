@@ -88,14 +88,11 @@
                                 <!-- Vista Celdas-->
                                 <div role="tabpanel" class="tab-pane fade show active" id="grid-view">
 
-                                    <div class="row" id="celdas">
+                                    <div class="row portadas" id="celdas">
                                         <?php
                                             require_once "backend/database.php";
                                             $sql = "SELECT * FROM `libros` WHERE `titulo` LIKE '%test%'";
                                             $consulta = mysqli_query ($conn,$sql) ;
-
-
-                                            
                                             While ($row=mysqli_fetch_assoc($consulta)){
                                                 echo '<div class="card col-3 mx-3">';
                                                 echo '<img src="data:'.$row["tipo_imagen"].';base64,'.base64_encode($row["binario_imagen"]).'"/>';
@@ -106,9 +103,6 @@
                                                         echo '<a href="detallesLibro.php?libro='.$row['id'].'">Detalles</a>';
                                                     echo '</div>';
                                                 echo '</div>';
-
-                                            
-
                                             }
 
                                         ?>
@@ -187,7 +181,6 @@
     </div>
     <!-- FIN TIENDA-->
 
- 
     <!-- ALL JS FILES -->
     <script src="js/controladores/controladorTienda.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
@@ -195,13 +188,6 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
-
-   
-   
-    
-
- 
-
 </body>
 
 </html>

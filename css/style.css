@@ -40,7 +40,6 @@
         transition: all .3s ease-in-out;
     }
     
-
     h2,
     h3,
     h4,
@@ -2091,7 +2090,7 @@
     }
 
 /* portadas */
-    .card{
+    .portadas .card{
         width: 220px;
         height: 300px;
         border-radius: 20px;
@@ -2099,14 +2098,14 @@
         position: relative;
     }
     
-    .card img{
+    .portadas .card img{
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 20px;
     }
     
-    .card-body{
+    .portadas .card-body{
         width: 100%;
         height: 100%;
         top: -100%;
@@ -2123,25 +2122,25 @@
         transition: 2s;
     }
     
-    .card-title{
+    .portadas .card-title{
         text-transform: uppercase;
         font-size: 20px;
         font-weight: 500;
     }
     
-    .card-sub-title{
+    .portadas .card-sub-title{
         text-transform: capitalize;
         font-size: 14px;
         font-weight: 300;
     }
     
-    .card-info{
+    .portadas .card-info{
         font-size: 16px;
         line-height: 25px;
         margin: 48px 0;
         font-weight: 400;
     }
     
-    .card:hover .card-body{
+    .portadas .card:hover .card-body{
         top: 0;
     }
