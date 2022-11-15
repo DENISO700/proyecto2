@@ -91,7 +91,8 @@
                                     <div class="row portadas" id="celdas">
                                         <?php
                                             require_once "backend/database.php";
-                                            $sql = "SELECT * FROM `libros`";
+                                            $filtro = $_POST['filtro'];
+                                            $sql = "SELECT * FROM libros WHERE titulo = '%$filtro%' OR autor LIKE '%$filtro%'";
                                             $consulta = mysqli_query ($conn,$sql) ;
                                             While ($row=mysqli_fetch_assoc($consulta)){
                                                 echo '<div class="card col-3 mx-3">';
@@ -137,15 +138,14 @@
                         <!-- Buscar-->
                         <div class="search-product">
                          
-                            <form action="busqueda.php" method="POST">
-                                <input list="browsers" name="filtro" class="form-control"  placeholder="Buscar aqui..." type="text" id="formulario">
-                                <button class="btn btn-info md-2" type="submit" id="boton" > <i class="fa fa-search"></i> </button>
-                            </form>
+                                <form action="busqueda.php" method="POST">
+                                        <input list="browsers" name="filtro" class="form-control"  placeholder="Buscar aqui..." type="text" id="formulario">
+                                        <button class="btn btn-info md-2" type="submit" id="boton" > <i class="fa fa-search"></i> </button>
+                                </form>
 
-
-                            <datalist id="browsers">
-    
-                            </datalist>
+                                <datalist id="browsers">
+   
+                                </datalist>
 
                            
                         </div>
