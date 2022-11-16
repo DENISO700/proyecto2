@@ -110,7 +110,17 @@
 
                                 <div class="col-md-4 mt-4">
                                     <select required name="clase" class="form-control" id="categorias">
-                                        <option value="">Clase</option>
+                                        <option unselected value="">Clase Orientación</option>
+                                    <?php
+                                            require_once "backend/database.php";
+                                            $sql = "SELECT * FROM `clases`";
+                                            $consulta = mysqli_query ($conn,$sql) ;
+                                            While ($row=mysqli_fetch_assoc($consulta)){
+                                                echo '<option value="'.$row['nombreClase'].'">'.$row['nombreClase'].'</option>';
+                                            }
+
+                                        ?>
+                                        
                                     </select>
                                 </div>
                                 <div class="col-md-4 mt-4">
@@ -170,15 +180,10 @@
             <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
             <!-- ALL JS FILES -->
-            <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-            <script src="js/controladores/controladorRegistroProducto.js"></script>
             <script src="js/controladorValidaciones.js"></script>
             <script src="js/jquery-3.2.1.min.js"></script>
             <script src="js/popper.min.js"></script>
             <script src="js/bootstrap.min.js"></script>
-            <!-- ALL PLUGINS -->
-            <script src="js/jquery.superslides.min.js"></script>
           
 
     </body>
