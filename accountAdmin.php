@@ -162,8 +162,6 @@ session_start()
 
         <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
-        <!-- ALL JS FILES -->
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>

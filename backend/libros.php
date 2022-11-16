@@ -13,7 +13,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $editorial=$_POST['editorial'];
     $correo_personal=$_POST['fecha'];
     $ISBN=$_POST['ISBN'];
-    $correo_personal=$_POST['paginas'];
+    $paginas=$_POST['paginas'];
     $clase=$_POST['clase'];
 
 
@@ -31,8 +31,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $tamaño_imagen=$_FILES['archivo1']['size'];
     $tipo_imagen=$_FILES['archivo1']['type'];
     
-    $consulta_insertar = "INSERT INTO `libros`(`ISBN`,`clase`, `titulo`, `autor`, `pais`, `año`, `edicion`, `editorial`,`archivo_binario`, `tamaño_archivo`, `tipo_archivo`, `nombre_archivo`,`binario_imagen`, `tamaño_imagen`, `tipo_imagen`,`imagen_portada`) 
-    VALUES ('$ISBN','$clase','$titulo',' $autor',' $pais','$año','$edicion','$editorial','$binario_contenido','$tamaño_archivo','$tipo_archivo','$nombre_archivo','$imagen_binaria','$tamaño_imagen','$tipo_imagen','$nombre_imagen')";
+    $consulta_insertar = "INSERT INTO `libros`(`ISBN`,`clase`, `titulo`, `autor`, `pais`, `año`, `edicion`, `editorial`,`archivo_binario`, `tamaño_archivo`, `tipo_archivo`, `nombre_archivo`,`binario_imagen`, `tamaño_imagen`, `tipo_imagen`,`imagen_portada`,`paginas`) 
+    VALUES ('$ISBN','$clase','$titulo',' $autor',' $pais','$año','$edicion','$editorial','$binario_contenido','$tamaño_archivo','$tipo_archivo','$nombre_archivo','$imagen_binaria','$tamaño_imagen','$tipo_imagen','$nombre_imagen','$paginas')";
     mysqli_query ($conn,$consulta_insertar) or die("No se pudo insertar los datos en la base de datos.");
 
     header("location: ../../SuperAdministrador.php");  

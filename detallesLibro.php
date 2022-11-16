@@ -119,7 +119,7 @@
 
                     <!-- No. Paginas -->
                     <div class="col-md-12">
-                        <p>No. Paginas: <span>Texto de Prueba</span></p>
+                        <p>No. Paginas: <span><?php echo $row["paginas"]?></span></p>
                     </div>
 
                     <div class="col-md-12 mt-4 leer">

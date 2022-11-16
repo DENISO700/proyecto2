@@ -2103,6 +2103,8 @@
         height: 100%;
         object-fit: cover;
         border-radius: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     
     .portadas .card-body{
@@ -2111,7 +2113,7 @@
         top: -100%;
         right: 0%;
         position: absolute;
-        background: #1F3D4738;
+        background: #000305b0;
         backdrop-filter: blur(5px);
         border-radius: 15px;
         color: white !important;
@@ -2120,6 +2122,10 @@
         flex-direction: column;
         justify-content: center;
         transition: 2s;
+    }
+
+    .portadas .card-body a{
+        color: white;
     }
     
     .portadas .card-title{
@@ -2144,3 +2150,4 @@
     .portadas .card:hover .card-body{
         top: 0;
     }
+

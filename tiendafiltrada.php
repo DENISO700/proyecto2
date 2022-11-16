@@ -95,13 +95,13 @@
                                             $sql = "SELECT * FROM `libros` WHERE `clase`='$clase'";
                                             $consulta = mysqli_query ($conn,$sql) ;
                                             While ($row=mysqli_fetch_assoc($consulta)){
-                                                echo '<div class="card col-3 mx-3">';
+                                                echo '<div class="card col-3 m-3">';
                                                 echo '<img src="data:'.$row["tipo_imagen"].';base64,'.base64_encode($row["binario_imagen"]).'"/>';
 
                                                     echo '<div class="card-body">';
                                                         echo '<h1 class="card-title">'.$row['titulo'].'</h1>';
                                                         echo '<p class="card-info">'.$row['autor'].'</p>';
-                                                        echo '<a href="detallesLibro.php?libro='.$row['id'].'">Detalles</a>';
+                                                        echo '<a href="detallesLibro.php?libro='.$row['id'].'"><i class="fa fa-eye" ></i></a>';
                                                     echo '</div>';
                                                 echo '</div>';
                                             }
@@ -111,12 +111,6 @@
 
                                 </div>
                                 <!-- Fin Vista Celdas-->
-
-                                <!-- Vista Lista-->
-                                <div role="tabpanel" class="tab-pane fade" id="list-view">
-
-                                </div>
-                                <!-- Fin Vista Lista-->
 
                             </div>
 
@@ -193,13 +187,6 @@
         </div>
 
     </div>
-    <!-- FIN TIENDA-->
-
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- ALL PLUGINS -->
-    <script src="js/custom.js"></script>
 </body>
 
 </html>
