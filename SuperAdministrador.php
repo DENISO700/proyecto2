@@ -157,7 +157,6 @@ session_start()
         </div>
 
         <!-- ALL JS FILES -->
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="js/controladores/controladorSuperAdministrador.js"></script>
         <script src="js/controladorValidaciones.js"></script>
         <script src="js/jquery-3.2.1.min.js"></script>

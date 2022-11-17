@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/responsive.css">
 
    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+   
    <link rel="stylesheet" href="./css/detalle_Libro.css">
  
 </head>
@@ -62,7 +63,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Biblioteca Ichiraku</h2>
+                    <h2>Detalles Libro</h2>
 
                 </div>
             </div>
@@ -89,41 +90,41 @@
                 <div class="row" style="text-align: left;">
                     <!-- Autor -->
                     <div class="col-md-12">
-                        <p>Autor: <span><?php echo $row["autor"]?></span></p>
+                        <p style="font-size:20px"><b>Autor:</b>  <span><?php echo $row["autor"]?></span></p>
                     </div>
 
                     <!-- Editorial -->
                     <div class="col-md-12">
-                        <p>Editorial: <span><?php echo $row["editorial"]?></span></p>
+                        <p style="font-size:20px"><b>Editorial: </b> <span><?php echo $row["editorial"]?></span></p>
                     </div>
 
                     <!-- Edicion -->
                     <div class="col-md-12">
-                        <p>Edicion: <span><?php echo $row["edicion"]?></span></p>
+                        <p style="font-size:20px"><b>Edicion: </b> <span><?php echo $row["edicion"]?></span></p>
                     </div>
 
                     <!-- ISBN -->
                     <div class="col-md-12">
-                        <p>ISBN: <span><?php echo $row["ISBN"]?></span></p>
+                        <p style="font-size:20px"><b>ISBN: </b><span><?php echo $row["ISBN"]?></span></p>
                     </div>
 
                     <!-- Pais -->
                     <div class="col-md-12">
-                        <p>Pais: <span><?php echo $row["pais"]?></span></p>
+                        <p style="font-size:20px"><b>Pais: </b><span><?php echo $row["pais"]?></span></p>
                     </div>
 
                     <!-- Fecha -->
                     <div class="col-md-12">
-                        <p>Año de Publicacion: <span><?php echo $row["año"]?></span></p>
+                        <p style="font-size:20px"><b>Año de Publicacion: </b><span><?php echo $row["año"]?></span></p>
                     </div>
 
                     <!-- No. Paginas -->
                     <div class="col-md-12">
-                        <p>No. Paginas: <span><?php echo $row["paginas"]?></span></p>
+                        <p style="font-size:20px"><b>No. Paginas: </b><span><?php echo $row["paginas"]?></span></p>
                     </div>
 
-                    <div class="col-md-12 mt-4 leer">
-                        <a href='verLibro.php?id=<?php echo $row['id']; ?>' target='_blank'>Leer Libro</a>
+                    <div class="col-md-12 mt-4 leer ">
+                        <a class="btn btn-secondary " href='verLibro.php?id=<?php echo $row['id']; ?>' target='_blank'>Leer Libro</a>
                     </div>
 
                 </div>
@@ -136,17 +137,6 @@
 
     <!-- ALL JS FILES -->
     <script src="js/controladores/controladorTienda.js"></script>
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- ALL PLUGINS -->
-    <script src="js/custom.js"></script>
-
-   
-   
-    
-
- 
 
 </body>
 
